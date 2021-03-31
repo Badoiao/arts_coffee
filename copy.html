@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永溪藝術館</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        .background_center_cover{
+            background-position: center;
+            background-size: cover;
+        }
+
+        nav{
+            width:100%;
+            height: 50px;
+
+            display: flex; 
+            justify-content: space-between;
+
+            position: fixed;
+
+            background-color: teal;
+            border: 1px solid;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+
+            background-image: url(./img/67230005_1063675427355770_9018862835433734144_o.png);
+        }
+
+        .tag{
+            width: 400px;
+
+            display: flex; 
+            justify-content: space-around;
+            align-items: center;
+
+            color:white;
+        }
+        .banner{
+            width: 100%;
+            height: 680px;
+
+            background-image: url(./img/pic/02-素材/02-店內/01.jpg);
+        }
+
+
+        @media (max-width:1024px){}
+        @media (max-width:768px){}
+        @media (max-width:480px){}
+        @media (max-width:320px){}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo background_center_cover"></div>
+        <div class="tag">
+            <div>關於永溪藝術館</div>
+            <div>永溪藝術館空間</div>
+            <div>店內商品</div>
+            <div>聯絡資訊</div>
+        </div>
+    </nav>
+
+    <container>
+        <!-- banner -->
+        <div class="banner background_center_cover">       
+        </div>
+
+        <main>
+            <div id="about">關於永溪藝術館</div>
+
+            <div id="interior">永溪藝術館空間</div>
+
+            <div id="goods">店內商品</div>
+
+            <div id="contact">聯絡資訊</div>
+        </main>
+
+        <footer>footer</footer>
+    </container>
+</body>
+
+</html>
