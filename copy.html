@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>永溪藝術館</title>
 
-    
+
 
     <style>
         * {
@@ -28,14 +28,16 @@
             background-size: cover;
         }
 
-        .top{
+
+
+        .top {
             width: 100px;
             height: 100px;
 
             background-color: black;
-            color:white;
+            color: white;
 
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: center;
 
@@ -43,13 +45,13 @@
 
             position: fixed;
             right: 5%;
-            bottom:5%;
+            bottom: 5%;
 
             z-index: 5;
         }
 
-        .top:hover{
-            background-color: rgb(125,125,125);
+        .top:hover {
+            background-color: rgb(125, 125, 125);
             transition: 0.3s;
         }
 
@@ -78,6 +80,7 @@
             position: relative;
 
         }
+
 
 
 
@@ -130,7 +133,7 @@
         }
 
         nav {
-            width: 390px;
+            width: 25%;
             height: 100vh;
 
             /* position: fixed; */
@@ -139,9 +142,18 @@
             background-color:blue; */
 
             display: flex;
-
             flex-direction: column;
             align-items: center;
+        }
+
+        .container_banner{
+            width: 50%;
+            height:100vh;
+        }
+
+        .persent {
+            width: 25%;
+            height: 100vh;
         }
 
         /* :hover {
@@ -180,7 +192,7 @@
         }
 
         :hover.tag_bg {
-            background-color: rgb(125,125,125);
+            background-color: rgb(125, 125, 125);
         }
 
         .tag_news {
@@ -206,7 +218,7 @@
 
 
         .container_banner {
-            width: 1140px;
+            width: 100%;
             height: 800px;
 
             border: 1px solid;
@@ -253,9 +265,9 @@
         .container_about {
 
             width: 100%;
-            height: 1200px;
+            height: 1100px;
 
-            border: solid 1px;
+            border: solid 1px yellow;
 
             display: flex;
             justify-content: center;
@@ -267,9 +279,9 @@
         #about {
 
             width: 1140px;
-            height: 1100px;
+            height: 1000px;
 
-            border: 1px solid black;
+            border: 1px solid rgb(71, 53, 231);
 
             display: flex;
             justify-content: center;
@@ -282,14 +294,51 @@
             width: 100%;
             height: 1080px;
 
-            border: solid 1px;
+            border: solid 1px red;
 
             display: flex;
             justify-content: center;
             align-items: flex-start;
 
-            padding: 50px 0px;
+            padding: 150px 0px;
         }
+
+        #interior{
+            width: 1140px;
+            height: 800px;
+
+        }
+        
+        .foor{
+            width: 50%;
+            height: 100%;
+        }
+
+        .building_container{
+            width: 100%;
+            height: 100%;
+
+            background-repeat: no-repeat;
+            background-size: 50%;
+
+            background-image: url(./img/pic/02-素材/building-01.png);
+            background-repeat: no-repeat;
+            background-size: 90%;
+
+            
+        }
+
+        .F2{
+            width: 80%;
+            height: 63%;
+            background-color: blue;
+        }
+        
+
+        
+    
+
+
 
         .container_goods {
             width: 100%;
@@ -350,18 +399,18 @@
             background-image: url(./img/pic/02-素材/02-店內/03.jpg);
         }
 
-        .good_pic_:hover{
+        .good_pic_:hover {
             width: 900px;
 
             transition: 0.3s;
 
             background-image: url(./img/pic/02-素材/02-店內/03.jpg);
-            background:-webkit-linear-gradient(bottom,rgba(255, 255, 255, 0.6)10%,rgba(255, 255, 255, 0)80%), 
-            url(./img/pic/02-素材/02-店內/03.jpg);
+            background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
+                url(./img/pic/02-素材/02-店內/03.jpg);
 
         }
-        
-        footer{
+
+        footer {
             background-color: black;
             color: white;
 
@@ -385,14 +434,23 @@
 </head>
 
 <body>
+    <!-- 回到最上面的icon -->
     <div class="top">TOP</div>
+
+
     <div class="main">
 
+        <!-- 共同標題的container + 標題自己 -->
         <div class="container_tittle_com">
             <div class="tittle">藝術家咖啡館~~~~~</div>
         </div>
+
+        <!-- banner_background_咖啡 100% * 2160px-->
         <div class="banner_background">
+
+            <!-- 25%nav + banner + 25%空白 -->
             <div class="nav_banner">
+
                 <nav>
                     <div class="logo background_center_cover"></div>
 
@@ -405,58 +463,79 @@
                     </div>
                 </nav>
 
-
+                <!-- banner的container 50% -->
                 <div class="container_banner">
                     <!-- banner 在這裡↓ -->
                     <div class="banner background_center_cover"> </div>
-                </div>
-            </div>
-
-            <div class="container_tittle_com">
-                <div class="tittle tittle_about">關於</div>
-            </div>
-
-            <div class="container_about">
-                <div id="about">關於永溪藝術館
-                    <div class="about_this">介紹</div>
-                    <div class="about_peoples">
-                        <div class="about_people_1">館長</div>
-                        <div class="about_people_2">藝術總監</div>
-                    </div>
 
                 </div>
+
+                <!-- 25%的留白 -->
+                <div class="persent"></div>                
+            </div>
+
+
+            
+        <div class="container_tittle_com">
+            <div class="tittle tittle_about">關於</div>
+        </div>
+
+        <div class="container_about">
+            <div id="about">關於永溪藝術館
+                <div class="about_this">介紹</div>
+                <div class="about_peoples">
+                    <div class="about_people_1">館長</div>
+                    <div class="about_people_2">藝術總監</div>
+                </div>
+
             </div>
         </div>
+
+
 
         <div class="container_tittle_com">
-            
             <div class="tittle ">店內空間介紹</div>
         </div>
-
+    
         <div class="container_space">
-            <div id="interior">永溪藝術館空間
-                <div class="foor_pic">樓層示意圖</div>
+            <div id="interior">
+                               
+                <!-- 分成兩塊foor+introduction 左邊區塊放小圖 右邊區塊是用來介紹的 -->
                 <div class="foor">
+                    <!-- 特別弄出一個放圖的building_container -->
+                    <div class="building_container">
+
+                        <!-- 移動到上方透明的div區塊 -->
+                        <div class="F2"></div>
+                        <div class="F1"></div>
+                    </div>
+                </div>
+                <!-- 介紹的容器 -->
+                <div class="introduction">
                     <div class="inerior_F1">F1內容</div>
                     <div class="inerior_F2">F2內容</div>
+                    <!-- 兩個區塊一樣大，在hover的時候顯示出來 -->
                 </div>
             </div>
         </div>
+    
 
         <div class="container_tittle_com">
             <div class="tittle tittle_about">商品介紹</div>
         </div>
+
         <div class="container_goods">
             店內商品
-
+    
             <div id="goods" class="goods">
                 <div class="good_pic_"></div>
                 <div class="good_pic_"></div>
                 <div class="good_pic_"></div>
                 <div class="good_pic_"></div>
-                
+    
             </div>
         </div>
+
         <div class="container_contact">
             <div id="contact">聯絡資訊</div>
         </div>
@@ -464,7 +543,7 @@
     </div>
     <footer>footer</footer>
 
-   
+
 </body>
 
 </html>
