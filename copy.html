@@ -146,7 +146,7 @@
             align-items: center;
         }
 
-        
+
 
         .persent {
             width: 20%;
@@ -214,7 +214,7 @@
 
 
         .container_banner {
-            width:60%;
+            width: 60%;
             height: 800px;
 
             border: 1px solid;
@@ -285,30 +285,31 @@
 
             padding: 80px;
         }
-        
-        .about_this{
+
+        .about_this {
             width: 100%;
-            
+
 
             background-color: rgba(250, 250, 250, 0.7);
             border-radius: 25px;
 
-            padding: 10px 20px 20px 20px ;
-            
-            margin:50px 0px 100px 0px;
+            padding: 10px 20px 20px 20px;
+
+            margin: 50px 0px 100px 0px;
         }
-        
-        .about_people_1{
+
+        .about_people_1 {
             background-color: rgba(250, 250, 250, 0.7);
             border-radius: 25px;
 
-            padding: 10px 20px 20px 20px ;
+            padding: 10px 20px 20px 20px;
         }
-        .about_people_2{
-            background-color: rgba(250, 250, 250,0.7);
+
+        .about_people_2 {
+            background-color: rgba(250, 250, 250, 0.7);
             border-radius: 25px;
 
-            padding: 10px 20px 20px 20px ;
+            padding: 10px 20px 20px 20px;
         }
 
 
@@ -353,31 +354,45 @@
             background-position: center;
 
             border: 1px solid;
-
-
         }
 
-        .F2 {
+        .introduction {
+            display: flex;
+            flex-direction: column;
+
+            background-color: brown;
+        }
+
+        #F2 {
             width: 100%;
             height: 63%;
             /* background-color: blue; */
         }
 
-        .inerior_F2 {
+        #inerior_F2 {
             width: 100%;
             height: 100%;
+
+            z-index: 2;
+            opacity: 0;
+
         }
 
-        .F1 {
+        #F1 {
             width: 100%;
             height: 37%;
 
             /* background-color: aqua; */
         }
 
-        .inerior_F1 {
+        #inerior_F1 {
             width: 100%;
             height: 100%;
+
+            z-index: 3;
+            opacity: 0;
+
+
         }
 
         .introduction {
@@ -486,6 +501,27 @@
 
     <script>
 
+        function showF2() {
+
+            var divObj = window.document.getElementById("inerior_F2");
+            divObj.style.opacity = "1"
+        }
+
+        function displayF2() {
+            var displayObj = window.document.getElementById("inerior_F2");
+            displayObj.style.opacity = "0";
+        }
+
+        function showF1() {
+
+            var divObj = window.document.getElementById("inerior_F1");
+            divObj.style.opacity = "1"
+        }
+
+        function displayF1() {
+            var displayObj = window.document.getElementById("inerior_F1");
+            displayObj.style.opacity = "0";
+        }
     </script>
 
 </head>
@@ -539,11 +575,11 @@
 
             <div class="container_about">
                 <div id="about">
-                    
+
                     <div class="about_this">
                         <h1>關於永溪藝術館</h1>
                         <br>私人美術館的成立，是為了從在地出發接地氣，走向國際，當我們把舞台打造的越大，台灣人的發展空間也就會越大。</br>
-                        
+
                     </div>
                     <div class="about_peoples">
                         <div class="about_people_1">
@@ -579,14 +615,20 @@
                         <div class="building_container">
 
                             <!-- 移動到上方透明的div區塊 -->
-                            <div class="F2"></div>
-                            <div class="F1"></div>
+                            <div id="F2"></div>
+                            <div id="F1"></div>
                         </div>
                     </div>
                     <!-- 介紹的容器 -->
                     <div class="introduction">
-                        <div class="inerior_F1">F1內容</div>
-                        <div class="inerior_F2">F2內容</div>
+
+                        <div id="inerior_F2">F2內容
+                            展覽的主要場所
+                        </div>
+                        <div id="inerior_F1">F1內容
+
+                            咖啡廳的主要場所，寧靜的空間
+                        </div>
                         <!-- 兩個區塊一樣大，在hover的時候顯示出來 -->
                     </div>
                 </div>
@@ -616,6 +658,23 @@
         </div>
         <!-- <footer>footer</footer> -->
 
+        <script>
+
+            var over = document.getElementById("F2");
+            over.addEventListener('mouseenter', showF2);
+
+            // document.addEventListener('mouseenter',show);
+            document.addEventListener('mouseout', displayF2);
+        </script>
+
+        <script>
+
+            var over = document.getElementById("F1");
+            over.addEventListener('mouseenter', showF1);
+
+            // document.addEventListener('mouseenter',show);
+            document.addEventListener('mouseout', displayF1);
+        </script>
 
 </body>
 

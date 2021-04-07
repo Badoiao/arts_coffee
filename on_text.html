@@ -8,11 +8,20 @@
     <title>Document</title>
 
     <style>
+
+        #touch{
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid;
+            
+        }
         #show {
-            width: 20px;
-            height: 20px;
+            width: 100px;
+            height: 100px;
 
             background-color: brown;
+            border:1px solid;
 
             opacity: 0;
         }
@@ -37,11 +46,14 @@
 
 <body>
 
-    <div id="show">123</div>
+    <div id="touch">
+        hellow
+    </div>
+    <div id="show"></div>
     
     <script>
 
-        var over = document.getElementById("show");
+        var over = document.getElementById("touch");
         over.addEventListener('mouseenter',show);
 
         // document.addEventListener('mouseenter',show);
