@@ -133,7 +133,7 @@
         }
 
         nav {
-            width: 25%;
+            width: 20%;
             height: 100vh;
 
             /* position: fixed; */
@@ -146,13 +146,10 @@
             align-items: center;
         }
 
-        .container_banner{
-            width: 50%;
-            height:100vh;
-        }
+        
 
         .persent {
-            width: 25%;
+            width: 20%;
             height: 100vh;
         }
 
@@ -172,23 +169,23 @@
             display: flex;
             flex-direction: column;
 
-            width: 320px;
-            height: 310px;
+            width: 100%;
+            height: 35vh;
 
-            margin-top: 150px;
-            margin-left: 25px;
+            margin-top: 100px;
+            margin-left: 0px;
         }
 
         .tag_bg {
-            width: 200px;
-            height: 45px;
+            width: 150px;
+            height: 40px;
             background-color: black;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            margin: 10px;
+            margin: 10px 0px;
         }
 
         :hover.tag_bg {
@@ -196,29 +193,28 @@
         }
 
         .tag_news {
-            margin-left: -50px;
+            margin-left: -25px;
         }
 
         .tag_about {
-            margin-left: 100px;
+            margin-left: 50px;
         }
 
         .tag_interior {
-            margin-left: -150px;
+            margin-left: -75px;
         }
 
         .tag_goods {
-            margin-left: -50px;
+            margin-left: -25px;
         }
 
         .tag_contact {
-            margin-left: 80px;
+            margin-left: 40px;
         }
 
 
-
         .container_banner {
-            width: 100%;
+            width:60%;
             height: 800px;
 
             border: 1px solid;
@@ -228,7 +224,6 @@
             flex-direction: column;
             align-items: center;
         }
-
 
 
         .logo {
@@ -265,7 +260,7 @@
         .container_about {
 
             width: 100%;
-            height: 1100px;
+            height: 1215px;
 
             border: solid 1px yellow;
 
@@ -284,11 +279,39 @@
             border: 1px solid rgb(71, 53, 231);
 
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
 
-            padding: 20px;
+            padding: 80px;
         }
+        
+        .about_this{
+            width: 100%;
+            
+
+            background-color: rgba(250, 250, 250, 0.7);
+            border-radius: 25px;
+
+            padding: 10px 20px 20px 20px ;
+            
+            margin:50px 0px 100px 0px;
+        }
+        
+        .about_people_1{
+            background-color: rgba(250, 250, 250, 0.7);
+            border-radius: 25px;
+
+            padding: 10px 20px 20px 20px ;
+        }
+        .about_people_2{
+            background-color: rgba(250, 250, 250,0.7);
+            border-radius: 25px;
+
+            padding: 10px 20px 20px 20px ;
+        }
+
+
 
         .container_space {
             width: 100%;
@@ -303,7 +326,7 @@
             padding: 150px 0px;
         }
 
-        #interior{
+        #interior {
             width: 1140px;
             height: 800px;
 
@@ -311,13 +334,13 @@
 
 
         }
-        
-        .foor{
+
+        .foor {
             width: 40%;
             height: 100%;
         }
 
-        .building_container{
+        .building_container {
             width: 100%;
             height: 100%;
 
@@ -327,36 +350,37 @@
             background-image: url(./img/pic/02-素材/building-01.png);
             background-repeat: no-repeat;
             background-size: 100%;
-            background-position:center;
+            background-position: center;
 
             border: 1px solid;
 
-            
+
         }
 
-        .F2{
+        .F2 {
             width: 100%;
             height: 63%;
             /* background-color: blue; */
         }
-        .inerior_F2{
+
+        .inerior_F2 {
             width: 100%;
             height: 100%;
         }
 
-        .F1{
+        .F1 {
             width: 100%;
             height: 37%;
 
             /* background-color: aqua; */
         }
 
-        .inerior_F1{
+        .inerior_F1 {
             width: 100%;
             height: 100%;
         }
 
-        .introduction{
+        .introduction {
             width: 60%;
             height: 100%;
 
@@ -364,8 +388,8 @@
 
             display: flex;
         }
-        
-    
+
+
 
 
 
@@ -461,7 +485,7 @@
     </style>
 
     <script>
-        
+
     </script>
 
 </head>
@@ -504,77 +528,93 @@
                 </div>
 
                 <!-- 25%的留白 -->
-                <div class="persent"></div>                
+                <div class="persent"></div>
             </div>
 
 
-            
-        <div class="container_tittle_com">
-            <div class="tittle tittle_about">關於</div>
-        </div>
 
-        <div class="container_about">
-            <div id="about">關於永溪藝術館
-                <div class="about_this">介紹</div>
-                <div class="about_peoples">
-                    <div class="about_people_1">館長</div>
-                    <div class="about_people_2">藝術總監</div>
+            <div class="container_tittle_com">
+                <div class="tittle tittle_about">關於</div>
+            </div>
+
+            <div class="container_about">
+                <div id="about">
+                    
+                    <div class="about_this">
+                        <h1>關於永溪藝術館</h1>
+                        <br>私人美術館的成立，是為了從在地出發接地氣，走向國際，當我們把舞台打造的越大，台灣人的發展空間也就會越大。</br>
+                        
+                    </div>
+                    <div class="about_peoples">
+                        <div class="about_people_1">
+                            <h1>美術館館長 蔣永溪</h1>
+                            <br>其「多元結盟、合作共創、互惠分享」的發展理念，擴大「藝術無國界」的平台量能。</br>
+                            <br>其以精細寫實詮釋的台灣山林、野溪、海洋等題材，繪畫語言獨特，難度極高，讓人耳目一新，堪稱開啟了風景畫派的全新面貌，也被大陸藝術界喻為台灣最重要的自然生態畫家。</br>
+                        </div>
+                        <br></br>
+                        <div class="about_people_2">
+                            <h1>藝術總監 楊麗玲</h1>
+
+                            <br>有人常說台灣最美的風景是人，但我認為最美的是風景」楊麗玲說，</br>
+                            <br>過去曾走訪台灣各地，目的為了在創作前親眼感受美景，其中描繪台灣東海岸的〈滔天〉，繪畫的當下彷彿就站在岸邊聆聽海浪不停拍打礁石的聲音。楊麗玲指出，每幅畫作對自己來說都是向大自然學習，也是對台灣禮讚，展名「山‧河‧海的詩性智慧」，即代表台灣的山川風景具有詩的性格。</br>
+
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
 
 
 
-        <div class="container_tittle_com">
-            <div class="tittle ">店內空間介紹</div>
-        </div>
-    
-        <div class="container_space">
-            <div id="interior">
-                               
-                <!-- 分成兩塊foor+introduction 左邊區塊放小圖 右邊區塊是用來介紹的 -->
-                <div class="foor">
-                    <!-- 特別弄出一個放圖的building_container -->
-                    <div class="building_container">
+            <div class="container_tittle_com">
+                <div class="tittle ">店內空間介紹</div>
+            </div>
 
-                        <!-- 移動到上方透明的div區塊 -->
-                        <div class="F2"></div>
-                        <div class="F1"></div>
+            <div class="container_space">
+                <div id="interior">
+
+                    <!-- 分成兩塊foor+introduction 左邊區塊放小圖 右邊區塊是用來介紹的 -->
+                    <div class="foor">
+                        <!-- 特別弄出一個放圖的building_container -->
+                        <div class="building_container">
+
+                            <!-- 移動到上方透明的div區塊 -->
+                            <div class="F2"></div>
+                            <div class="F1"></div>
+                        </div>
+                    </div>
+                    <!-- 介紹的容器 -->
+                    <div class="introduction">
+                        <div class="inerior_F1">F1內容</div>
+                        <div class="inerior_F2">F2內容</div>
+                        <!-- 兩個區塊一樣大，在hover的時候顯示出來 -->
                     </div>
                 </div>
-                <!-- 介紹的容器 -->
-                <div class="introduction">
-                    <div class="inerior_F1">F1內容</div>
-                    <div class="inerior_F2">F2內容</div>
-                    <!-- 兩個區塊一樣大，在hover的時候顯示出來 -->
+            </div>
+
+
+            <div class="container_tittle_com">
+                <div class="tittle tittle_about">商品介紹</div>
+            </div>
+
+            <div class="container_goods">
+                店內商品
+
+                <div id="goods" class="goods">
+                    <div class="good_pic_"></div>
+                    <div class="good_pic_"></div>
+                    <div class="good_pic_"></div>
+                    <div class="good_pic_"></div>
+
                 </div>
             </div>
-        </div>
-    
 
-        <div class="container_tittle_com">
-            <div class="tittle tittle_about">商品介紹</div>
-        </div>
-
-        <div class="container_goods">
-            店內商品
-    
-            <div id="goods" class="goods">
-                <div class="good_pic_"></div>
-                <div class="good_pic_"></div>
-                <div class="good_pic_"></div>
-                <div class="good_pic_"></div>
-    
+            <div class="container_contact">
+                <div id="contact">聯絡資訊</div>
             </div>
-        </div>
 
-        <div class="container_contact">
-            <div id="contact">聯絡資訊</div>
         </div>
-
-    </div>
-    <!-- <footer>footer</footer> -->
+        <!-- <footer>footer</footer> -->
 
 
 </body>
