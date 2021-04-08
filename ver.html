@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藝術家咖啡館</title>
+    <link rel="icon" type="image/x-ico"
+        href="http://cn.faviconico.org/ico-converted/20210330/favicon-2021033011093885.ico" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+
+            padding: 15px;
+
+            display: flex;
+            justify-content: space-between;
+
+            opacity: 0.8;
+
+            z-index: 6;
+        }
+
+        nav:hover {
+            opacity: 1;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-end;
+
+            padding: 20px;
+        }
+
+        .link {
+            width: 100px;
+            color: rgb(0, 0, 0);
+        }
+
+        .logo {
+            width: 100px;
+            height: 80px;
+
+            background-image: url(./img/67230005_1063675427355770_9018862835433734144_o.png);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .wv {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .slide>.banner_tittle {
+            z-index: 3;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            padding: 100px;
+
+
+
+            font-size: 70px;
+            font-weight: lighter;
+            color: aliceblue;
+
+        }
+
+        /* .banner_tittle {} */
+
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background-color: #000;
+        }
+
+
+        .slide>div {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+
+            background-size: cover;
+            position: absolute;
+            animation-name: slide;
+            animation-duration: 17s;
+            animation-iteration-count: infinite;
+            opacity: 0;
+        }
+
+        .slide>div:nth-child(1) {
+            animation-delay: 0s;
+            z-index: 5;
+        }
+
+        .slide>div:nth-child(2) {
+            animation-delay: 3s;
+            z-index: 4;
+        }
+
+        .slide>div:nth-child(3) {
+            animation-delay: 6s;
+            z-index: 3;
+        }
+
+        .slide>div:nth-child(4) {
+            animation-delay: 9s;
+            z-index: 2;
+        }
+
+        .slide>div:nth-child(5) {
+            animation-delay: 12s;
+            z-index: 1;
+
+        }
+
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+        }
+
+        .main {
+            width: 100%;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #container {
+            width: 1110px;
+            height: auto;
+
+        }
+
+        #about {
+            width: 100%;
+            height: 700px;
+
+            background-image: url(./img/pic/02-素材/aboutbg/about.png);
+            background-position: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+        }
+
+        .aboutbg {
+
+            width: 100%;
+            height: 550px;
+
+
+            background-image: url(./img/pic/02-素材/aboutbg/about.png);
+            background-position: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+
+        .about_tittle {
+            color: rgb(255, 255, 255);
+
+
+            margin-left: 200px;
+            margin-top: 350px;
+
+        }
+
+        .about_text {
+            width: 100%;
+            height: 150px;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .about_coffee_shop {
+            width: 500px;
+            height: 250px;
+
+            margin-right: 150px;
+        }
+
+        .about_people {
+            width: 100%;
+            height: 750px;
+
+
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .people {
+            width: 410px;
+            height: 630px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: 0px 50px;
+
+        }
+
+        .people_top {
+            margin-top: 100px;
+        }
+
+        .name_style {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+
+        .people_pic {
+            width: 100%;
+            height: 265px;
+        }
+
+        .people_pic_1 {
+            background-image: url(./img/pic/02-素材/01-油畫/2945201_2.jpg);
+            background-position: center;
+            background-size: 100%;
+        }
+
+        .people_pic_2 {
+            background-image: url(./img/pic/02-素材/01-油畫/2945201_1.jpg);
+            background-position: center;
+            background-size: 100%;
+        }
+
+
+        .people_text {
+            width: 350px;
+            height: 265px;
+
+
+            margin: 45px 30px;
+        }
+
+        #space {
+            width: 100%;
+            height: 780px;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            padding: 125px 0px;
+
+        }
+
+        .space_tittle {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+
+        .space_center_pic1 {
+            background-image: url(./img/pic/02-素材/02-店內/01.jpg);
+
+        }
+
+        .space_center_pic2 {
+            background-image: url(./img/pic/02-素材/02-店內/02.jpg);
+
+        }
+
+        .space_center_pic3 {
+            background-image: url(./img/pic/02-素材/02-店內/03.jpg);
+
+        }
+
+        .space_center_pic4 {
+            background-image: url(./img/pic/02-素材/02-店內/04.jpg);
+
+        }
+
+        .space_center_pic5 {
+            background-image: url(./img/pic/02-素材/02-店內/05.jpg);
+
+        }
+
+        .space_center_pic6 {
+            background-image: url(./img/pic/02-素材/02-店內/06.jpg);
+
+        }
+
+        .space_center_pic7 {
+            background-image: url(./img/pic/02-素材/02-店內/07.jpg);
+
+        }
+
+        .space_center_pic8 {
+            background-image: url(./img/pic/02-素材/02-店內/08.jpg);
+
+        }
+
+        .space_center_pic9 {
+            background-image: url(./img/pic/02-素材/02-店內/09.jpg);
+
+        }
+
+        .space_center_pic10 {
+            background-image: url(./img/pic/02-素材/02-店內/10.jpg);
+
+        }
+
+        .space_center_pic11 {
+            background-image: url(./img/pic/02-素材/02-店內/11.jpg);
+
+        }
+
+
+
+        .swiper-container {
+            width: 980px;
+            height: 630px;
+        }
+
+        /*
+        #goods {
+           
+        } */
+
+        .dessert {
+            width: 100%;
+            height: 800px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .dessert_space {
+            width: 520px;
+            height: 700px;
+
+            display: flex;
+            flex-flow: wrap column;
+
+            margin: 0px;
+
+        }
+
+        .dessert_tittle {
+
+            width: 140px;
+            height: 100%;
+
+            padding: 20px 5px;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .dessert_tittle_text {
+            width: 40px;
+            height: 255px;
+
+            font-size: 25px;
+
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .dessert_pic {
+            width: 316px;
+            height: 316px;
+
+            margin: 40px;
+
+            border-radius: 50%;
+            background-color: darkolivegreen;
+        }
+
+        .dessert_pic_1 {
+            background-image: url(./img/pic/02-素材/03-商品/88331226_1256298738093437_3711783158941745152_n.jpg);
+            background-position: right;
+            background-size: cover;
+
+        }
+
+        .dessert_text {
+            width: 316px;
+            height: 256px;
+
+            margin: 0px 0px 0px 40px;
+            padding: 20px;
+
+
+        }
+
+        .dessert_pic_2 {
+            background-image: url(./img/pic/02-素材/03-商品/92973504_1292608554462455_6375255944430878720_n.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+
+
+
+
+        .coffee {
+            width: 100%;
+            height: 800px;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            background: linear-gradient(91deg, rgba(146, 123, 79, 1)0%, rgba(255, 255, 255, 1)68%);
+            background: -moz-linear-gradient(91deg, rgba(146, 123, 79, 1)0%, rgba(255, 255, 255, 1)68%);
+            background: -webkit-linear-gradient(91deg, rgba(146, 123, 79, 1)0%, rgba(255, 255, 255, 1)68%);
+            background: -o-linear-gradient(91deg, rgba(146, 123, 79, 1)0%, rgba(255, 255, 255, 1)68%);
+
+        }
+
+        .coffee_space {
+            width: 1140px;
+            height: 500px;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .coffee_pic {
+            width: 363px;
+            height: 363px;
+
+            border-radius: 318px;
+
+            margin: 10px;
+
+            background-color: darkslateblue;
+            background-image: url(./img/pic/02-素材/03-商品/55832979_980300245693289_3767422411562024960_n.jpg);
+            background-size: 180%;
+
+
+        }
+
+        .coffee_space_tt {
+            width: 445px;
+            height: 363px;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            margin: 10px;
+        }
+
+        .coffee_tittle {
+            width: 250px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 5px;
+            margin: 10x 0px;
+
+        }
+
+        .coffee_text {
+            width: 445px;
+            height: 215px;
+
+            padding: 20px;
+        }
+
+
+
+        #contact {
+            width: 100%;
+            height: 80px;
+
+            background-color: rgb(146, 123, 79);
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .contact_space {
+            width: 1140px;
+            height: 80px;
+
+            display: flex;
+            flex-flow: wrap;
+        }
+
+
+        .contact_text {
+            width: 285px;
+            height: 80px;
+
+            color: rgb(255, 255, 255);
+
+            font-size: 12px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+        :target {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#banner">
+            <div class="logo"></div>
+        </a>
+
+        <div class="links">
+            <a href="#banner">
+                <div class="link">banner</div>
+            </a>
+            <a href="#about">
+                <div class="link">about</div>
+            </a>
+            <a href="#space">
+                <div class="link">space</div>
+            </a>
+            <a href="#goods">
+                <div class="link">goods</div>
+            </a>
+            <a href="#contact">
+                <div class="link">contact</div>
+            </a>
+        </div>
+
+
+    </nav>
+
+    <div class="main">
+        <div id="banner" class="wv">
+
+            <div class="slide">
+                <div class="banner_tittle">從在地出發接地氣，能夠走向國際</div>
+                <div style="background-image: url(./img/pic/02-素材/02-店內/12.jpg)">
+                </div>
+                <div style="background-image: url(./img/pic/02-素材/02-店內/13.jpg)">
+                </div>
+
+                <div style="background-image: url(./img/pic/02-素材/02-店內/14.jpg)">
+                </div>
+                <div style="background-image: url(./img/pic/02-素材/02-店內/15.jpg)">
+                </div>
+                <div style="background-image: url(./img/pic/02-素材/02-店內/16.jpg)">
+                </div>
+                <!-- 
+                    
+                    
+                    <div style="background-image: url(./img/pic/02-素材/02-店內/28828923_703844010005582_8116541447095260809_o.jpg)"></div>
+                -->
+            </div>
+        </div>
+        <div id="container">
+
+            <div id="about">
+                <div data-aos="fade-right">
+                    <div class="aboutbg">
+                        <div class="about_tittle">
+                            <h1>關於永溪咖啡館</h1>
+                        </div>
+                    </div>
+                    <div class="about_text">
+                        <div class="about_coffee_shop">
+                            <br>永溪藝術館-藝術家咖啡館 在彰化和美星巴克旁。</br>
+                            <br></br>
+                            館內空間寬敞，座位之間有超大的距離，完全不用怕打擾到其他人，
+                            還有提供插座、wifi、不限時，消費價格接受度高，很適合三五好友來這聊天、閱讀、賞藝術。永溪藝術館不定時有藝術作品展覽，
+                            還備有小型會議室。
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="about_people">
+                <div class="people people_top">
+                    <div class="name_style">館長-蔣永溪</div>
+                    <div class="people_pic people_pic_1"></div>
+                    <div class="people_text">
+
+                        <p>其「多元結盟、合作共創、互惠分享」的發展理念
+                            擴大「藝術無國界」的平台量能。</p>
+                        <br></br>
+                        <p>其以精細寫實詮釋的台灣山林、野溪、海洋等題材，繪畫語言獨特，難度極高，
+                            讓人耳目一新，堪稱開啟了風景畫派的全新面貌，也被大陸藝術界喻為台灣最重
+                            要的自然生態畫家。</p>
+                    </div>
+                </div>
+
+
+
+                <div class="people">
+                    <div class="name_style">藝術總監-楊麗玲</div>
+                    <div class="people_pic people_pic_2"></div>
+                    <div class="people_text">
+                        <br>「有人常說台灣最美的風景是人，但我認為最美的是風景。」</br>
+                        <br>過去曾走訪台灣各地，目的為了在創作前親眼感受美景，其中描繪台灣東海岸的〈滔天〉，繪畫的當下彷彿就站在岸邊聆聽海浪不停拍打礁石的聲音。</br>
+                        <br>楊麗玲指出，每幅畫作對自己來說都是向大自然學習，也是對台灣禮讚，展名「山‧河‧海的詩性智慧」，即代表台灣的山川風景具有詩的性格。</br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+
+            <div id="space">
+                <div class="space_tittle">
+                    <h1>室內空間</h1>
+                </div>
+                <!-- <div class="space_center_pic"></div> -->
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide space_center_pic1"></div>
+                        <div class="swiper-slide space_center_pic2"></div>
+                        <div class="swiper-slide space_center_pic3"></div>
+                        <div class="swiper-slide space_center_pic4"></div>
+                        <div class="swiper-slide space_center_pic5"></div>
+                        <div class="swiper-slide space_center_pic6"></div>
+                        <div class="swiper-slide space_center_pic7"></div>
+                        <div class="swiper-slide space_center_pic8"></div>
+                        <div class="swiper-slide space_center_pic9"></div>
+                        <div class="swiper-slide space_center_pic10"></div>
+                        <div class="swiper-slide space_center_pic11"></div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="goods">
+            <h1>甜點‧咖啡</h1>
+        </div>
+
+        <div class="dessert">
+            <div data-aos="fade-down">
+                <div class="dessert_space">
+
+                    <div class="dessert_tittle">
+
+
+                        <div class="dessert_tittle_text">葡萄果凍蛋糕</div>
+                    </div>
+                    <div class="dessert_pic dessert_pic_1"></div>
+                    <div class="dessert_text">
+                        <br>鮮艷甜美的葡萄,酸甜可口,鮮嫩多汁,且有特殊的水果芳香,營養價值高,含豐富的維他命C。</br>
+                        <br>葡萄的色、香、味俱佳,拿來做甜點最合適了。</br>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="dessert_space">
+                    <div class="dessert_tittle">
+                        <div class="dessert_tittle_text">經典吐司</div>
+                    </div>
+                    <div class="dessert_pic dessert_pic_2"></div>
+                    <div class="dessert_text">
+                        <br>主要由高筋麵粉、酵母、奶油、糖、食鹽、蛋、水製作而成。</br>
+                        <br>經由攝氏約190度的烤爐，烤約30分鐘，出爐後冷卻切片。麵包經過加熱後，表面逐漸變成褐色。這種變化過程稱為梅納反應。</br>
+                        <br>溫度高時較為鬆軟好吃，低溫的狀態下會變硬，風味口感會差很多。</br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-down">
+        <div class="coffee">
+            <div class="coffee_space">
+                <div class="coffee_pic"></div>
+                <div class="coffee_space_tt">
+                    <div class="coffee_tittle dessert_tittle_text">Specialty Coffee</div>
+                    <div class="coffee_text">
+                        <br>精品咖啡，通常是指阿拉比卡種及極少數的羅布斯塔種咖啡，因為生長自獨特的土壤氣候環境，往往會形成特殊的香氣口感。</br>
+                        <br>根據娥娜‧努森的觀察，並非所有的咖啡都是同一種風味，而那種與眾不同、風味很好的咖啡，就是精品咖啡。</br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="contact">
+        <div class="contact_space">
+            <div class="contact_text">
+                <div>永溪藝術館</div>
+                <div>藝術家咖啡館</div>
+            </div>
+            <div class="contact_text">和美鎮山犁里道周路443號</div>
+            <div class="contact_text">tel 04 757 3750</div>
+            <div class="contact_text">Copyright © 2021 ching. All rights reserved.</div>
+        </div>
+    </div>
+    <!-- <div id="footer">Copyright © 2021 ching. All rights reserved.</div> -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper(...)
+
+    </script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
+
+</body>
+
+</html>
