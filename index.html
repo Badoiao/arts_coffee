@@ -11,6 +11,9 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <style>
         * {
             box-sizing: border-box;
@@ -19,8 +22,10 @@
 
         html {
             scroll-behavior: smooth;
+        }
 
-
+        a {
+            color: white;
         }
 
         .background_center_cover {
@@ -217,8 +222,6 @@
             width: 60%;
             height: 800px;
 
-            border: 1px solid;
-
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
@@ -233,8 +236,6 @@
             margin-top: 100px;
 
             background-image: url(./img/67230005_1063675427355770_9018862835433734144_o.png);
-
-
         }
 
         .tag {
@@ -248,21 +249,104 @@
         }
 
         .banner {
-            width: 840px;
-            height: 450px;
+            width: 825px;
+            height: 495px;
 
-            background-image: url(./img/pic/02-素材/02-店內/01.jpg);
             margin-top: 200px;
-
-            border: solid 1px red;
         }
+
+        .swiper-container {
+            width: 825px;
+            height: 495px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-size: 100%;
+            background-repeat: no-repeat;
+            
+        }
+
+        .p1{
+            background-image: url(./img/pic/02-素材/02-店內/01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p2{
+            background-image: url(./img/pic/02-素材/02-店內/02.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .p3{
+            background-image: url(./img/pic/02-素材/02-店內/03.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p4{
+            background-image: url(./img/pic/02-素材/02-店內/04.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p5{
+            background-image: url(./img/pic/02-素材/02-店內/05.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p6{
+            background-image: url(./img/pic/02-素材/02-店內/06.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p7{
+            background-image: url(./img/pic/02-素材/02-店內/07.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p8{
+            background-image: url(./img/pic/02-素材/02-店內/08.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p9{
+            background-image: url(./img/pic/02-素材/02-店內/09.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p10{
+            background-image: url(./img/pic/02-素材/02-店內/10.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p11{
+            background-image: url(./img/pic/02-素材/02-店內/11.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .p12{
+            background-image: url(./img/pic/02-素材/02-店內/12.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
 
         .container_about {
 
             width: 100%;
             height: 1215px;
-
-            border: solid 1px yellow;
 
             display: flex;
             justify-content: center;
@@ -315,8 +399,6 @@
         .container_space {
             width: 100%;
             height: 1080px;
-
-            border: solid 1px red;
 
             display: flex;
             justify-content: center;
@@ -424,8 +506,7 @@
             width: 100%;
             height: 1200px;
 
-            border: solid 1px;
-
+ 
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -436,8 +517,6 @@
         .container_contact {
             width: 100%;
             height: 1200px;
-
-            border: solid 1px;
 
             display: flex;
             justify-content: center;
@@ -474,11 +553,9 @@
             height: 750px;
             margin: 0px 5px;
 
-            color: aliceblue;
-            font-size: 72px;
-
             display: flex;
-            align-items: flex-end;
+            justify-content: space-between;
+            flex-direction: column;
 
 
             background-repeat: no-repeat;
@@ -486,72 +563,133 @@
             background-size: cover;
         }
 
-        .good_pic_1 {
+        .good_set>p {
+            color: aliceblue;
+            font-size: 72px;
+
+
+        }
+
+        .good_set>ul {
+            color: aliceblue;
+            font-size: 20px;
+
+            display: flex;
+
+            justify-content: flex-start;
+            flex-direction: column;
+
+            padding: 50px;
+        }
+
+        #good_ul_1 {
+            opacity: 0;
+        }
+
+        #good_ul_2 {
+            opacity: 0;
+        }
+
+        #good_ul_3 {
+            opacity: 0;
+        }
+
+        #good_ul_4 {
+            opacity: 0;
+        }
+
+
+
+        #good_pic_1 {
             background-image: url(./img/pic/02-素材/banner-01.png);
         }
 
-        .good_pic_2 {
+        #good_pic_2 {
             background-image: url(./img/pic/02-素材/banner-02.png);
         }
 
-        .good_pic_3 {
+        #good_pic_3 {
             background-image: url(./img/pic/02-素材/banner-03.png);
         }
 
-        .good_pic_4 {
+        #good_pic_4 {
             background-image: url(./img/pic/02-素材/banner-04.png);
         }
 
+        .coffee_introduction {
+
+            border: 1px solid;
+            font-size: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+
+        }
 
 
 
-        .good_pic_1:hover {
+
+        #good_pic_1:hover {
+            width: 900px;
+            transition: 0.3s;
+
+            background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
+                url(./img/pic/02-素材/7742443.jpg);
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #good_pic_2:hover {
+            width: 900px;
+            transition: 0.3s;
+
+            background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
+                url(./img/pic/02-素材/03-商品/30830314_1814407612195543_8499606202789920768_n.jpg);
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #good_pic_3:hover {
             width: 900px;
             transition: 0.3s;
 
             background-image: url(./img/pic/02-素材/02-店內/03.jpg);
 
             background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
-                url(./img/pic/02-素材/02-店內/03.jpg);
+                url(./img/pic/02-素材/03-商品/67788297_1074179966305316_915139337572581376_n.jpg);
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
-        .good_pic_2:hover {
+        #good_pic_4:hover {
             width: 900px;
             transition: 0.3s;
 
-            background-image: url(./img/pic/02-素材/02-店內/03.jpg);
 
             background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
-                url(./img/pic/02-素材/02-店內/03.jpg);
+                url(./img/pic/02-素材/03-商品/88331226_1256298738093437_3711783158941745152_n.jpg);
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
-        .good_pic_3:hover {
-            width: 900px;
-            transition: 0.3s;
-
-            background-image: url(./img/pic/02-素材/02-店內/03.jpg);
-
-            background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
-                url(./img/pic/02-素材/02-店內/03.jpg);
-        }
-
-        .good_pic_4:hover {
-            width: 900px;
-            transition: 0.3s;
-
-            background-image: url(./img/pic/02-素材/02-店內/03.jpg);
-
-            background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.6)10%, rgba(255, 255, 255, 0)80%),
-                url(./img/pic/02-素材/02-店內/03.jpg);
-        }
-        .container_contact{
+        .container_contact {
 
             width: 100%;
-            height: 100px;           
-            
+            height: 100px;
+
         }
 
-        .contact{
+        .contact {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -559,7 +697,7 @@
             padding: 5px;
         }
 
-        .contact > *{
+        .contact>* {
             width: 250px;
             height: 25px;
 
@@ -568,12 +706,12 @@
             align-items: center;
         }
 
-        .FB{
+        .FB {
             width: 100px;
             height: 100px;
 
             border-radius: 50%;
-            
+
             background-image: url(./img/fb-icon.png);
             background-size: cover;
             background-position: center;
@@ -585,7 +723,7 @@
             align-items: center;
         }
 
-        
+
 
         footer {
             background-color: black;
@@ -633,13 +771,54 @@
             var displayObj = window.document.getElementById("inerior_F1");
             displayObj.style.opacity = "0";
         }
+
+
+        function showUl_1() {
+            var showUl_1 = document.getElementById("good_ul_1");
+            showUl_1.style.opacity = "1";
+        }
+        function disappearUl_1() {
+            var disappearUl_1 = document.getElementById("good_ul_1");
+            disappearUl_1.style.opacity = "0";
+        }
+
+        function showUl_2() {
+            var showUl_2 = document.getElementById("good_ul_2");
+            showUl_2.style.opacity = "1";
+        }
+        function disappearUl_2() {
+            var disappearUl_2 = document.getElementById("good_ul_2");
+            disappearUl_2.style.opacity = "0";
+        }
+
+
+        function showUl_3() {
+            var showUl_3 = document.getElementById("good_ul_3");
+            showUl_3.style.opacity = "1";
+        }
+        function disappearUl_3() {
+            var disappearUl_3 = document.getElementById("good_ul_3");
+            disappearUl_3.style.opacity = "0";
+        }
+
+
+        function showUl_4() {
+            var showUl_4 = document.getElementById("good_ul_4");
+            showUl_4.style.opacity = "1";
+        }
+        function disappearUl_4() {
+            var disappearUl_4 = document.getElementById("good_ul_4");
+            disappearUl_4.style.opacity = "0";
+        }
     </script>
 
 </head>
 
 <body>
     <!-- 回到最上面的icon -->
-    <div class="top">TOP</div>
+    <a href="#a">
+        <div class="top">TOP</div>
+    </a>
 
 
     <div class="main">
@@ -656,46 +835,84 @@
             <div class="nav_banner">
 
                 <nav>
-                    <div class="logo background_center_cover"></div>
+                    <a href="#a">
+                        <div class="logo background_center_cover"></div>
+                    </a>
 
                     <div class="tag">
-                        <div class="tag_news tag_bg" data-aos="fade-right">NEWS!</div>
-                        <div class="tag_about tag_bg" data-aos="fade-left">ABOUT</div>
-                        <div class="tag_interior tag_bg" data-aos="fade-right">INTERIOR</div>
-                        <div class="tag_goods tag_bg" data-aos="fade-left">GOODS</div>
-                        <div class="tag_contact tag_bg" data-aos="fade-right">CONTACT</div>
+
+                        <a href="#a">
+                            <div class="tag_news tag_bg" data-aos="fade-right">NEWS!</div>
+                        </a>
+                        <a href="#b">
+                            <div class="tag_about tag_bg" data-aos="fade-left">ABOUT</div>
+                        </a>
+                        <a href="#c">
+                            <div class="tag_interior tag_bg" data-aos="fade-right">INTERIOR</div>
+                        </a>
+                        <a href="#d">
+                            <div class="tag_goods tag_bg" data-aos="fade-left">GOODS</div>
+                        </a>
+                        <a href="#e">
+                            <div class="tag_contact tag_bg" data-aos="fade-right">CONTACT</div>
+                        </a>
                     </div>
                 </nav>
 
                 <!-- banner的container 50% -->
-                <div class="container_banner">
+                <div class="container_banner" id="a">
                     <!-- banner 在這裡↓ -->
-                    <div class="banner background_center_cover"> </div>
+                    <div class="banner background_center_cover">
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper ">
+                                <!-- Slides -->
+                                <div class="swiper-slide p1"></div>
+                                <div class="swiper-slide p2"></div>
+                                <div class="swiper-slide p3"></div>
+                                <div class="swiper-slide p4"></div>
+                                <div class="swiper-slide p5"></div>
+                                <div class="swiper-slide p6"></div>
+                                <div class="swiper-slide p7"></div>
+                                <div class="swiper-slide p8"></div>
+                                <div class="swiper-slide p9"></div>
+                                <div class="swiper-slide p10"></div>
+                                <div class="swiper-slide p11"></div>
+                                <div class="swiper-slide p12"></div>
+                                ...
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
 
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- 25%的留白 -->
                 <div class="persent"></div>
             </div>
-
 
 
             <div class="container_tittle_com">
                 <div class="tittle tittle_about" data-aos="fade-right">關於</div>
             </div>
 
-            <div class="container_about">
+            <div class="container_about" id="b">
                 <div id="about">
 
-                    <div class="about_this" data-aos="fade-up"
-                    data-aos-duration="3000">
+                    <div class="about_this" data-aos="fade-up" data-aos-duration="3000">
                         <h1>關於永溪藝術館</h1>
                         <br />
                         <p>私人美術館的成立，是為了從在地出發接地氣，走向國際，當我們把舞台打造的越大，台灣人的發展空間也就會越大。</p>
 
                     </div>
-                    <div class="about_peoples" data-aos="fade-up"
-                    data-aos-duration="3000">
+
+                    <div class="about_peoples" data-aos="fade-up" data-aos-duration="3000">
                         <div class="about_people_1">
                             <h1>美術館館長 蔣永溪</h1>
                             <br />
@@ -703,8 +920,7 @@
                             <p>其以精細寫實詮釋的台灣山林、野溪、海洋等題材，繪畫語言獨特，難度極高，讓人耳目一新，堪稱開啟了風景畫派的全新面貌，也被大陸藝術界喻為台灣最重要的自然生態畫家。</p>
                         </div>
                         <br></br>
-                        <div class="about_people_2" data-aos="fade-up"
-                        data-aos-duration="3000">
+                        <div class="about_people_2" data-aos="fade-up" data-aos-duration="3000">
                             <h1>藝術總監 楊麗玲</h1>
                             <br />
                             <p>有人常說台灣最美的風景是人，但我認為最美的是風景」楊麗玲說，</p>
@@ -720,7 +936,7 @@
 
 
 
-            <div class="container_tittle_com">
+            <div class="container_tittle_com" id="c">
                 <div class="tittle" data-aos="fade-left">店內空間介紹</div>
             </div>
 
@@ -768,43 +984,88 @@
             </div>
 
 
-            <div class="container_tittle_com">
+            <div class="container_tittle_com" id="d">
                 <div class="tittle tittle_about" data-aos="fade-right">商品介紹</div>
             </div>
 
             <div class="container_goods">
-                店內商品
-
                 <div id="goods" class="goods">
-                    <div class="good_set good_pic_1">咖啡</div>
-                    <div class="good_set good_pic_2">茶飲</div>
-                    <div class="good_set good_pic_3">輕食</div>
-                    <div class="good_set good_pic_4">甜點</div>
+
+
+                    <div class="good_set" id="good_pic_1">
+
+                        <ul id="good_ul_1">
+                            <li>手沖咖啡</li>
+                            <li>義式特調</li>
+                            <li>西西里咖啡激推</li>
+                            <li>好喝值得</li>
+                            <li>他有氣泡！！！</li>
+
+                        </ul>
+
+                        <p>咖啡</p>
+
+                    </div>
+
+                    <div class="good_set" id="good_pic_2">
+
+                        <ul id="good_ul_2">
+                            <li>高山紅茶</li>
+                            <li>超級好喝</li>
+                            <li>騙你好喝</li>
+
+                        </ul>
+
+                        <p>茶飲</p>
+                    </div>
+                    <div class="good_set" id="good_pic_3">
+
+                        <ul id="good_ul_3">
+                            <li>隨便你吃</li>
+                            <li>很多吐司</li>
+                            <li>還有鬆餅</li>
+                        </ul>
+
+                        <p>輕食</p>
+                    </div>
+                    <div class="good_set" id="good_pic_4">
+
+                        <ul id="good_ul_4">
+                            <li>有檸檬塔</li>
+                            <li>一個八十</li>
+                            <li>跟隔壁比</li>
+                            <li>沒有很貴</li>
+                            <li>隔壁
+                            <li>深海奸商</li>
+                        </ul>
+
+                        <p>甜點</p>
+                    </div>
 
                 </div>
             </div>
 
-            <div class="container_contact">
-                
+            <div class="container_contact" id="e">
+
                 <div class="contact">
                     <div>508彰化縣和美鎮道周路443號</div>
-                    <br/>
+                    <br />
                     <div>
                         <p>營業時間 09:30–21:00</p>
                     </div>
-                    <br/>
+                    <br />
                     <div>電話 04 757 3750</div>
-               
+
 
                     <div class="contact_icon">
                         <a href="https://zh-tw.facebook.com/ARTSCAFE508/" target="_blank">
                             <div class="FB"></div>
                         </a>
                     </div>
-    
+
                 </div>
-                </div>  
-                
+            </div>
+
             <footer>Copyright © 2021 badoiao833. All rights reserved.</footer>
         </div>
         <!-- <footer>footer</footer> -->
@@ -830,6 +1091,63 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
+        </script>
+
+        <script>
+            var GoodSetUl = document.getElementById("good_pic_1");
+
+            GoodSetUl.addEventListener('mouseenter', showUl_1);
+            GoodSetUl.addEventListener('mouseout', disappearUl_1);
+
+
+            var GoodSetUl = document.getElementById("good_pic_2");
+
+            GoodSetUl.addEventListener('mouseenter', showUl_2);
+            GoodSetUl.addEventListener('mouseout', disappearUl_2);
+
+
+            var GoodSetUl = document.getElementById("good_pic_3");
+
+            GoodSetUl.addEventListener('mouseenter', showUl_3);
+            GoodSetUl.addEventListener('mouseout', disappearUl_3);
+
+
+            var GoodSetUl = document.getElementById("good_pic_4");
+
+            GoodSetUl.addEventListener('mouseenter', showUl_4);
+            GoodSetUl.addEventListener('mouseout', disappearUl_4);
+
+        </script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script type="module">
+            import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+            const swiper = new Swiper('.swiper-container', {
+                // Optional parameters
+
+                // direction: 'vertical',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
         </script>
 </body>
 
