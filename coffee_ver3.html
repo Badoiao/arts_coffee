@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Coffee</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* nav的部分↓ */
+        nav {
+            position: fixed;
+            z-index: 1;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+
+            background-color: blueviolet;
+        }
+
+        .tag {
+            width: 150px;
+            height: 50px;
+
+            display:flex;
+            justify-content: center;
+            align-items:center;
+
+            color:black;
+
+            background-color: brown;
+        }
+
+        .tag:hover{
+            color:white;
+            transition: 0.3s;
+        }
+
+        /* nav的部分↑ */
+
+        .container {
+            width: 100%;
+            height: auto;
+
+            background-color: aqua;
+        }
+
+        #banner {
+            width: 100%;
+            height: 100Vh;
+
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo_img tag">logo</div>
+
+        <a href="#banner">
+            <div class="tag ">banner</div>
+        </a>
+        <a href="#about">
+            <div class="tag">about</div>
+        </a>
+        <a href="#space">
+            <div class="tag">space</div>
+        </a>
+        <a href="#goods">
+            <div class="tag">goods</div>
+        </a>
+    </nav>
+
+    <div class="container">
+        <div id="banner">banner</div>
+        <div id="about">about</div>
+        <div id="space">space</div>
+        <div id="goods">goods</div>
+    </div>
+    <div id="fotter"></div>
+
+</body>
+
+</html>
